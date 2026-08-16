@@ -1,0 +1,100 @@
+[
+  {
+    "id": "pszmk/mnist-vae-latent2",
+    "score": 14.749,
+    "downloads": 8,
+    "tags": [
+      "vae",
+      "mnist",
+      "transformers",
+      "safetensors",
+      "cpu-friendly"
+    ],
+    "pipeline_tag": null,
+    "reason": "known AutoModel + safetensors MNIST VAE (CPU-safe); domain_hits=1, vae_match, loadability=4.5, downloads=8",
+    "loadable": true
+  },
+  {
+    "id": "uday9k/Gaussian_MNIST_VAE",
+    "score": 12.799,
+    "downloads": 10,
+    "tags": [
+      "vae",
+      "mnist",
+      "pytorch"
+    ],
+    "pipeline_tag": null,
+    "reason": "custom MNIST VAE weights on Hub; domain_hits=1, vae_match, loadability=4.5, downloads=10",
+    "loadable": true
+  },
+  {
+    "id": "uday9k/Binarized_MNIST_VAE",
+    "score": 10.593,
+    "downloads": 15,
+    "tags": [
+      "vae",
+      "generative-model",
+      "pytorch",
+      "mnist",
+      "unsupervised-learning",
+      "custom_code",
+      "en",
+      "dataset:mnist",
+      "license:mit",
+      "region:us"
+    ],
+    "pipeline_tag": null,
+    "reason": "domain_hits=2, vae_match, loadability=1.5, downloads=15 [hub]",
+    "loadable": false
+  },
+  {
+    "id": "karthik-2905/VariationalAutoencoders",
+    "score": 9.7,
+    "downloads": 0,
+    "tags": [
+      "deep-learning",
+      "generative-ai",
+      "pytorch",
+      "vae",
+      "variational-autoencoder",
+      "mnist",
+      "computer-vision",
+      "unsupervised-learning",
+      "representation-learning",
+      "dataset:mnist",
+      "license:mit",
+      "region:us"
+    ],
+    "pipeline_tag": null,
+    "reason": "domain_hits=1, vae_match, loadability=1.5 [hub]",
+    "loadable": false
+  },
+  {
+    "id": "jolespin/binary-vae-mnist",
+    "score": 8.148,
+    "downloads": 5,
+    "tags": [
+      "pytorch",
+      "region:us"
+    ],
+    "pipeline_tag": null,
+    "reason": "domain_hits=1, vae_match, loadability=1.5, downloads=5 [hub]",
+    "loadable": false
+  },
+  {
+    "id": "madebyollin/sdxl-vae-fp16-fix",
+    "score": 7.651,
+    "downloads": 297423,
+    "tags": [
+      "diffusers",
+      "safetensors",
+      "stable-diffusion",
+      "stable-diffusion-diffusers",
+      "license:mit",
+      "region:us"
+    ],
+    "pipeline_tag": null,
+    "reason": "vae_match, loadability=1.5, downloads=297423 [hub]",
+    "loadable": false
+  }
+]
