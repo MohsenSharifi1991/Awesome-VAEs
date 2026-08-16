@@ -62,9 +62,15 @@ Candidates are scored with transparent heuristics:
 
 This package is intended to run inside a cloud agent / VM (no local GPU required). Inference uses CPU by default; CUDA is used when present.
 
+### Inference fallbacks
+
+1. Load the top-ranked Hub model with `transformers.AutoModel`
+2. If load fails **or** latent means are collapsed, try a known CPU-safe Hub MNIST VAE
+3. If still unusable, train a local `TinyVAE` on the discovered dataset (few epochs, CPU) and run reconstruction + prior sampling
+
 ## CLI
 
 ```bash
-python -m hybrid_agent "Generate MNIST digits with a VAE and reconstruct samples"
-python -m hybrid_agent --task "Fashion-MNIST VAE reconstruction" --out runs/demo
+python3 -m hybrid_agent "Generate MNIST digits with a VAE and reconstruct samples"
+python3 -m hybrid_agent --task "Fashion-MNIST VAE reconstruction" --out runs/demo
 ```

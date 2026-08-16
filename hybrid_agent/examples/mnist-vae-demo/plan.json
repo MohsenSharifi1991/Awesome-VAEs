@@ -1,0 +1,29 @@
+{
+  "task": "Generate and reconstruct MNIST digits with a variational autoencoder",
+  "intents": [
+    "vae",
+    "mnist",
+    "generation",
+    "reconstruction"
+  ],
+  "stages": [
+    "plan",
+    "literature",
+    "datasets",
+    "models",
+    "inference",
+    "report"
+  ],
+  "search_queries": [
+    "Generate and reconstruct MNIST digits with a variational autoencoder",
+    "vae",
+    "variational autoencoder",
+    "mnist vae"
+  ],
+  "preferred_domains": [
+    "mnist",
+    "digit",
+    "binarized"
+  ],
+  "notes": "Hybrid plan: symbolic intent extraction + fixed research DAG; agents adapt ranking and may fall back during inference."
+}

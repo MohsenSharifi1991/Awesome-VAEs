@@ -1,0 +1,19 @@
+{
+  "model_id": "local:TinyVAE(trained_on=ylecun/mnist)",
+  "dataset_id": "ylecun/mnist",
+  "requested_model_id": "pszmk/mnist-vae-latent2",
+  "requested_dataset_id": "ylecun/mnist",
+  "device": "cpu",
+  "mode": "local_train+reconstruction+prior_sample",
+  "artifact_paths": [
+    "runs/mnist-vae-demo/inference/reconstructions.png",
+    "runs/mnist-vae-demo/inference/samples.png",
+    "runs/mnist-vae-demo/inference/latent_means.json",
+    "runs/mnist-vae-demo/inference/tiny_vae.pt"
+  ],
+  "metrics": {
+    "recon_mse": 0.025689,
+    "train_final_loss": 138.2879
+  },
+  "notes": "Resolved dataset ylecun/mnist; Loaded Hub model `pszmk/mnist-vae-latent2` via AutoModel; Detected collapsed Hub latents; switching to local TinyVAE training; Trained TinyVAE epochs=5 final_loss=138.2879 samples=60000; Saved checkpoint runs/mnist-vae-demo/inference/tiny_vae.pt"
+}

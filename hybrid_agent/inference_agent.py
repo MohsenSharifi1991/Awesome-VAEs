@@ -43,7 +43,7 @@ def _mnist_loaders(dataset_id: str, batch_size: int = 128, n_eval: int = 16):
         resolved = "ylecun/mnist"
 
     # Keep training light for cloud CPU demos.
-    train_subset = Subset(train_ds, list(range(min(8000, len(train_ds)))))
+    train_subset = Subset(train_ds, list(range(min(12000, len(train_ds)))))
     train_loader = DataLoader(train_subset, batch_size=batch_size, shuffle=True, num_workers=0)
     eval_x = torch.stack([test_ds[i][0].view(-1) for i in range(n_eval)], dim=0)
     return train_loader, eval_x, resolved
@@ -151,7 +151,7 @@ def run_inference(
                     pass
 
     if use_local:
-        model, stats = train_tiny_vae(train_loader, device=device, epochs=3, latent_dim=16)
+        model, stats = train_tiny_vae(train_loader, device=device, epochs=5, latent_dim=20)
         used_model = f"local:TinyVAE(trained_on={resolved_ds})"
         mode = "local_train+reconstruction+prior_sample"
         notes.append(

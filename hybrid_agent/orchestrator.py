@@ -40,7 +40,7 @@ def run_pipeline(task: str, out_dir: str | Path = "runs/latest") -> RunReport:
 
     if Stage.LITERATURE in plan.stages:
         try:
-            papers = search_literature(plan.search_queries, limit=8)
+            papers = search_literature(plan.search_queries, domains=plan.preferred_domains, limit=8)
             (out / "literature.json").write_text(
                 json.dumps([p.__dict__ for p in papers], indent=2),
                 encoding="utf-8",

@@ -1,0 +1,90 @@
+[
+  {
+    "id": "ylecun/mnist",
+    "score": 10.151,
+    "downloads": 80000,
+    "tags": [
+      "mnist",
+      "digit",
+      "image",
+      "vision"
+    ],
+    "reason": "domain_hits=2, query_overlap=1, downloads=80000 [catalog]"
+  },
+  {
+    "id": "zalando-datasets/fashion_mnist",
+    "score": 7.308,
+    "downloads": 30000,
+    "tags": [
+      "fashion-mnist",
+      "clothing",
+      "image",
+      "vision"
+    ],
+    "reason": "domain_hits=1, query_overlap=1, downloads=30000 [catalog]"
+  },
+  {
+    "id": "Temporarium/HDR_Photos_VAE_Training_DNG",
+    "score": 3.806,
+    "downloads": 1713,
+    "tags": [
+      "license:cc0-1.0",
+      "size_categories:n<1K",
+      "region:us",
+      "HDR",
+      "dng",
+      "photographs",
+      "images"
+    ],
+    "reason": "query_overlap=1, downloads=1713 [hub]"
+  },
+  {
+    "id": "yuanchenyang/imagenet-256-flux2-vae-latents",
+    "score": 3.724,
+    "downloads": 1353,
+    "tags": [
+      "task_categories:image-classification",
+      "license:other",
+      "size_categories:1M<n<10M",
+      "format:parquet",
+      "format:optimized-parquet",
+      "library:datasets",
+      "library:dask",
+      "library:polars",
+      "library:mlcroissant",
+      "region:us",
+      "imagenet",
+      "latent-diffusion"
+    ],
+    "reason": "query_overlap=1, downloads=1353 [hub]"
+  },
+  {
+    "id": "LAXMAYDAY/pdm3-ht-20260528-flux2-vae-latents-public",
+    "score": 3.608,
+    "downloads": 971,
+    "tags": [
+      "license:other",
+      "region:us",
+      "imagenet-1k",
+      "image-generation",
+      "flux2",
+      "vae-latents",
+      "safetensors",
+      "pdm3-ht"
+    ],
+    "reason": "query_overlap=1, downloads=971 [hub]"
+  },
+  {
+    "id": "grspo/imagenet-latents-flux-vae-mjhq512bs128fix-e2e-lr2e-5-400k",
+    "score": 3.554,
+    "downloads": 832,
+    "tags": [
+      "size_categories:1M<n<10M",
+      "format:arrow",
+      "library:datasets",
+      "library:mlcroissant",
+      "region:us"
+    ],
+    "reason": "query_overlap=1, downloads=832 [hub]"
+  }
+]

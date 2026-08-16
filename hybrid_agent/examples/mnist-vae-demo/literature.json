@@ -1,0 +1,58 @@
+[
+  {
+    "title": "VDSM: Unsupervised Video Disentanglement with State-Space Modeling and Deep Mixtures of Experts. Vowels, Camgoz, Bowden",
+    "url": "https://arxiv.org/pdf/2103.07292.pdf",
+    "year": "2021",
+    "score": 5.077,
+    "snippet": "VDSM: Unsupervised Video Disentanglement with State-Space Modeling and Deep Mixtures of Experts. Vowels, Camgoz, Bowden https://arxiv.org/pdf/2103.07292.pdf"
+  },
+  {
+    "title": "Unsupervised representation disentanglement using cross domain features and adversarial learning in variational autoencoder based voice conversion.\tHuang, Luo, Hwang, Lo, Peng, Tsao, Wang\t",
+    "url": "https://arxiv.org/pdf/2001.07849.pdf",
+    "year": "2020",
+    "score": 4.772,
+    "snippet": "Unsupervised representation disentanglement using cross domain features and adversarial learning in variational autoencoder based voice conversion.\tHuang, Luo, Hwang, Lo, Peng, Tsao, Wang\thttps://arxiv.org/pdf/2001.07849.pdf"
+  },
+  {
+    "title": "Semi-Supervised Disentanglement of Class-Related and Class-Independent Factors in VAE. Hajimiri, Lotfi, Baghshah",
+    "url": "https://arxiv.org/pdf/2102.00892.pdf",
+    "year": "2021",
+    "score": 4.427,
+    "snippet": "Semi-Supervised Disentanglement of Class-Related and Class-Independent Factors in VAE. Hajimiri, Lotfi, Baghshah. https://arxiv.org/pdf/2102.00892.pdf"
+  },
+  {
+    "title": "S3VAE: self-supervised sequential VAE for representation disentanglement and data generation.\tZhu, Min, Kadav, Graf,\t",
+    "url": "https://arxiv.org/pdf/2005.11437.pdf",
+    "year": "2020",
+    "score": 4.377,
+    "snippet": "S3VAE: self-supervised sequential VAE for representation disentanglement and data generation.\tZhu, Min, Kadav, Graf,\thttps://arxiv.org/pdf/2005.11437.pdf"
+  },
+  {
+    "title": "Variational learning with disentanglement-pytorch.\tAbdi, Abolmaesumi, Fels\t",
+    "url": "https://openreview.net/pdf?id=rJgUsFYnir",
+    "year": "2019",
+    "score": 4.327,
+    "snippet": "Variational learning with disentanglement-pytorch.\tAbdi, Abolmaesumi, Fels\thttps://openreview.net/pdf?id=rJgUsFYnir"
+  },
+  {
+    "title": "Disentanglement with hyperspherical latent spaces using diffusion variational autoencoders.\tRey\t",
+    "url": "https://openreview.net/pdf?id=SylFDSU6Sr",
+    "year": "2019",
+    "score": 4.327,
+    "snippet": "Disentanglement with hyperspherical latent spaces using diffusion variational autoencoders.\tRey\thttps://openreview.net/pdf?id=SylFDSU6Sr"
+  },
+  {
+    "title": "Unsuperivsed disentanglement of pitch and timbre for isolated musical instrument sounds. \tLuo, Cheuk, Nakano, Goto, Herremans\t",
+    "url": "https://program.ismir2020.net/static/final_papers/162.pdf",
+    "year": "2020",
+    "score": 3.97,
+    "snippet": "Unsuperivsed disentanglement of pitch and timbre for isolated musical instrument sounds. \tLuo, Cheuk, Nakano, Goto, Herremans\thttps://program.ismir2020.net/static/final_papers/162.pdf"
+  },
+  {
+    "title": "Self-supervised disentanglement of modality-specific and shared factors improves multimodal generative models. \tDaunhawer, Sutter, Marcinkevics, Vogt\t",
+    "url": "https://mds.inf.ethz.ch/fileadmin/user_upload/gcpr_100_v01.pdf",
+    "year": "2020",
+    "score": 3.97,
+    "snippet": "Self-supervised disentanglement of modality-specific and shared factors improves multimodal generative models. \tDaunhawer, Sutter, Marcinkevics, Vogt\thttps://mds.inf.ethz.ch/fileadmin/user_upload/gcpr_100_v01.pdf"
+  }
+]

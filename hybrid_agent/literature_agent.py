@@ -26,13 +26,15 @@ _HIGH_VALUE = {
 _GENERIC = {"vae", "variational", "autoencoder", "auto", "encoder", "learning", "deep", "neural", "network"}
 
 
-def search_literature(queries: list[str], limit: int = 8) -> list[PaperHit]:
+def search_literature(queries: list[str], domains: list[str] | None = None, limit: int = 8) -> list[PaperHit]:
     if not README.exists():
         return []
 
     query_tokens: set[str] = set()
     for q in queries:
         query_tokens |= _tokenize(q)
+    for d in domains or []:
+        query_tokens |= _tokenize(d)
     # Always bias toward VAE core terms from this repo
     query_tokens |= {"vae", "variational", "autoencoder", "disentanglement"}
 
