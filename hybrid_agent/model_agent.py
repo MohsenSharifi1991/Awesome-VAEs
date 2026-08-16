@@ -8,14 +8,16 @@ from .types import ModelCandidate
 # Models known to load via transformers AutoModel for this demo path.
 PREFERRED_LOADABLE = {
     "pszmk/mnist-vae-latent2": {
-        "tags": ["vae", "mnist", "transformers", "safetensors"],
+        "tags": ["vae", "mnist", "transformers", "safetensors", "cpu-friendly"],
         "downloads": 8,
-        "reason": "known AutoModel + safetensors MNIST VAE",
+        "reason": "known AutoModel + safetensors MNIST VAE (CPU-safe)",
+        "priority": 2.5,
     },
     "uday9k/Gaussian_MNIST_VAE": {
         "tags": ["vae", "mnist", "pytorch"],
         "downloads": 10,
         "reason": "custom MNIST VAE weights on Hub",
+        "priority": 0.5,
     },
 }
 
@@ -70,9 +72,10 @@ def discover_models(
 
     for mid, meta in PREFERRED_LOADABLE.items():
         score, reason = _score(mid, meta["tags"], meta.get("downloads"), domains, queries, None)
+        priority = float(meta.get("priority", 1.0))
         candidates[mid] = ModelCandidate(
             id=mid,
-            score=round(score + 1.0, 3),
+            score=round(score + 1.0 + priority, 3),
             downloads=meta.get("downloads"),
             tags=list(meta["tags"]),
             reason=meta["reason"] + "; " + reason,

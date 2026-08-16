@@ -17,6 +17,15 @@ def _tokenize(text: str) -> set[str]:
     return {t for t in re.findall(r"[a-z0-9]+", text.lower()) if len(t) > 2}
 
 
+# Domain/task tokens get higher weight than generic VAE vocabulary.
+_HIGH_VALUE = {
+    "mnist", "fashion", "celeba", "cifar", "digit", "image", "face",
+    "disentanglement", "beta", "hierarchical", "conditional", "video",
+    "graph", "speech", "medical", "molecule", "generation", "reconstruction",
+}
+_GENERIC = {"vae", "variational", "autoencoder", "auto", "encoder", "learning", "deep", "neural", "network"}
+
+
 def search_literature(queries: list[str], limit: int = 8) -> list[PaperHit]:
     if not README.exists():
         return []
@@ -45,14 +54,22 @@ def search_literature(queries: list[str], limit: int = 8) -> list[PaperHit]:
         if len(title) < 8:
             continue
         tokens = _tokenize(title)
-        overlap = len(tokens & query_tokens)
-        if overlap == 0:
+        overlap_tokens = tokens & query_tokens
+        if not overlap_tokens:
             continue
-        # Prefer denser keyword matches; slight recency bump
+        # Down-weight generic VAE words so domain matches rise to the top.
+        weighted = 0.0
+        for t in overlap_tokens:
+            if t in _HIGH_VALUE:
+                weighted += 2.5
+            elif t in _GENERIC:
+                weighted += 0.35
+            else:
+                weighted += 1.0
         year_bonus = 0.0
         if year and year.isdigit():
             year_bonus = max(0.0, (int(year) - 2015) / 20.0)
-        score = overlap + 0.35 * math.log1p(overlap) + year_bonus
+        score = weighted + 0.2 * math.log1p(len(overlap_tokens)) + year_bonus
         scored.append(
             PaperHit(
                 title=title[:200],
